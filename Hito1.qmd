@@ -84,7 +84,7 @@ La colocación en este caso sería del tipo Oferta Pública Nacional (OPN), en l
 En la siguiente tabla se muestra algunos datos sobre el rendimiento de las acciones de Parque Arauco en los últimos años:
 
 |                                           |          |          |          |          |          |
-|-------------------------------------------|----------|----------|----------|----------|----------|
+|------------------------|----------|----------|----------|----------|----------|
 | **Divisa: CLP**                           | **2018** | **2019** | **2020** | **2021** | **2022** |
 | **Dividendos por acción (FY)**            | 39       | 25       | 0        | 20       | 25       |
 | **Rentabilidad por dividendo (FY) %**     | 2,52     | 1,35     | 0        | 2,13     | 2,31     |
@@ -131,6 +131,8 @@ Junto a esto, la proyección del banco en términos de crecimiento para los pró
 Finalmente, a Parque Arauco se le otorgó un 20% del portafolio debido a la diversificación del modelo de negocios que han implementado en los últimos años.
 El ingreso al negocio de los edificios multifamily podría ser una razón de gran crecimiento para la empresa en el futuro, debido a que actualmente ya operan dos edificios en Santiago, tienen proyectos que estarán operando en el corto plazo en Perú y Colombia, y tienen planes de seguir ampliando esta cantidad.
 Considerando la gran demanda de arriendo que existe hoy en día, la empresa podría verse muy beneficiada con la implementación de este nuevo negocio.
+
+hola esto esuna prubea
 
 **Referencias**
 
