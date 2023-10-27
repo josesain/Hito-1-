@@ -84,7 +84,7 @@ La colocación en este caso sería del tipo Oferta Pública Nacional (OPN), en l
 En la siguiente tabla se muestra algunos datos sobre el rendimiento de las acciones de Parque Arauco en los últimos años:
 
 |                                           |          |          |          |          |          |
-|------------------------|----------|----------|----------|----------|----------|
+|------------|------------|------------|------------|------------|------------|
 | **Divisa: CLP**                           | **2018** | **2019** | **2020** | **2021** | **2022** |
 | **Dividendos por acción (FY)**            | 39       | 25       | 0        | 20       | 25       |
 | **Rentabilidad por dividendo (FY) %**     | 2,52     | 1,35     | 0        | 2,13     | 2,31     |
@@ -185,3 +185,19 @@ Clasificaciones, estimaciones y pronósticos de analistas de Banco de Chile (CHI
 *Yahoo Finanzas - Mercado de valores en vivo, cotizaciones, negocios y noticias financieras*.
 \[Consultado el 28 de septiembre de 2023\].
 Disponible en: <https://es-us.finanzas.yahoo.com/quote/CHILE.SN/analysis?p=CHILE.SN>
+
+**Hito 2**
+
+\*La parte individual está en el archivo de Google Colab.
+
+**Caso Grupal**
+
+Los datos se obtuvieron en su mayoría del Estado Financiero de la empresa Enel Chile a junio de 2023.
+Los datos que no pudieron ser encontrados se supusieron a partir de la misa información entregada en ese documento.
+
+El caso escogido para replicar con nuestro activo fue el del capítulo 28 del libro guía del curso "Finanzas Corporativas" de Ross, en el cuál se evalúan tres opciones.
+A continuación, se presentan los datos:
+
+![](Captura de pantalla 2023-10-27 173355.png)
+
+A partir de lo anterior, se puede determinar que la opción 3 es la mejor debido a que obtiene VPN mayor.
