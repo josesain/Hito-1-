@@ -22,12 +22,56 @@ Hasta la fecha la empresa cuenta con dos edificios multifamily en Chile, ambos o
 Además de estos cuatro edificios, Parque Arauco tiene planes de seguir ampliando su negocio en el rubro de los edificios multifamily, tanto en Chile como en Perú y Colombia.
 Hoy en día, la empresa cuenta con más de un millón de metros cuadrados de superficie a nivel consolidado.
 
+```{r configuraciones}
+#| message: false
+#| echo: false
+install.packages("tidyverse")
+# Esto ya debiera estar cargado en el proyecto en posit.cloud
+#devtools::install_github("business-science/tidyquant")
+#Loads tidyquant, lubridate, xts, quantmod, TTR, and PerformanceAnalytics
+library(tidyverse)
+library(tidyquant)
+```
+
+```{r ETL}
+#| echo: false
+# Alternativamente Use FANG data set
+# data("FANG") 
+end <- as_date("2023-11-13")
+# Get AAPL and AMZN Stock Prices
+# AAPL <- tq_get("AAPL", get = "stock.prices", from = "2015-09-01", to = end)
+# AMZN <- tq_get("AMZN", get = "stock.prices", from = "2000-01-01", to = end)
+PARAUCO <- tq_get("PARAUCO.SN", get = "stock.prices", from = "2000-01-01", to = end)
+CL <- rbind(PARAUCO)
+```
+
+```{r CMPCline}
+#| echo: false
+PARAUCO %>%
+    ggplot(aes(x = date, y = close)) +
+    geom_line() +
+    labs(title = "PARAUCO Line Chart", y = "Closing Price", x = "") + 
+    theme_tq() +
+  geom_hline(yintercept=mean(CMPC$close), linetype="dashed", color = "red")
+```
+
+```{r CMPCcandle}
+#| warning: false
+PARAUCO %>%
+    ggplot(aes(x = date, y = close)) +
+    geom_candlestick(aes(open = open, high = high, low = low, close = close)) +
+    labs(title = "AAPL Candlestick Chart", y = "Closing Price", x = "") +
+    theme_tq()
+
+```
+
 **Motivación**
 
 Se ha decidido elegir esta empresa ya que en primer lugar es una de las empresas más grandes de Chile, y que como se mencionó en el punto de definición, están activos en impulsar el crecimiento del rubro de los edificios multifamily en el país.
 Esto último es positivo debido a que este concepto es una buena alternativa en estos momentos para que la gente pueda conseguir una vivienda, debido a las altas tasas actuales de créditos hipotecarios que hacen cada vez más dificil la posibilidad de conseguir una vivienda propia para las personas.
 Por esto este concepto de vivienda es una muy buena alternativa de inversión, debido a la gran demanda de arriendos que se genera por las altas tasas hipotecarias.
 Parque Arauco esta diversificando su modelo de negocio, no solamente quedándose en el rubro de los centros comerciales, del cuál ya son lideres en el país, sino que también están impulsando otros modelos de negocio que son bastante interesantes para el desarrollo del país.
+Además, es una empresa comprometida con objetivos de sostenibilidad, poniendo en uno de sus principales pilares el cuidado del medio ambiente.
 
 **Contexto**
 
@@ -198,6 +242,6 @@ Los datos que no pudieron ser encontrados se supusieron a partir de la misa info
 El caso escogido para replicar con nuestro activo fue el del capítulo 28 del libro guía del curso "Finanzas Corporativas" de Ross, en el cuál se evalúan tres opciones.
 A continuación, se presentan los datos:
 
-![](Captura de pantalla 2023-10-27 173355.png)
+![](Captura%20de%20pantalla%202023-10-27%20173355.png)
 
 A partir de lo anterior, se puede determinar que la opción 3 es la mejor debido a que obtiene VPN mayor.
